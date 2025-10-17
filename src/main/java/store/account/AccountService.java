@@ -70,7 +70,9 @@ public class AccountService {
     }
 
     public void delete(String id) {
-        accountRepository.delete(new AccountModel().id(id));
+        accountRepository.delete(accountRepository.findById(id).orElseThrow(() ->
+            new ResponseStatusException(HttpStatus.NOT_FOUND, "Account not found!")
+        ));
     }
 
     private String hash(String pass) {
