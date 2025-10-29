@@ -19,6 +19,7 @@ public class AccountParser {
                 .id(a.id())
                 .name(a.name())
                 .email(a.email())
+                .role(a.role())
                 .build();
     }
 

@@ -12,5 +12,6 @@ public class Account {
     private String email;
     private String password;
     private String sha256;
+    private Role role;
     
 }

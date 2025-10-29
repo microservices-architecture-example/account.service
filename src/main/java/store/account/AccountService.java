@@ -48,6 +48,9 @@ public class AccountService {
 
         account.sha256(hash(account.password()));
 
+        // set default role
+        account.role(Role.USER);
+
         return accountRepository.save(
             new AccountModel(account)
         ).to();
