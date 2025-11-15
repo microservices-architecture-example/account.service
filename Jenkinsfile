@@ -55,7 +55,7 @@ pipeline {
 
                     # aplica manifest inicial se ainda não existir
                     if ! kubectl get deploy ${SERVICE} >/dev/null 2>&1; then
-                    kubectl apply -f ./k8s/k8s.yaml
+                    kubectl apply -f ./k8s/
                     fi
 
                     # atualiza a imagem do Deployment
